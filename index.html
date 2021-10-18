@@ -1,0 +1,2649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cum Rocket | Email Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Vue CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: "SharpSans-Bold";
+        src: url("assets/fonts/SharpSans-Bold.woff");
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: "SharpSans-Semibold";
+        src: url("assets/fonts/SharpSans-Semibold.woff");
+        font-weight: 600;
+      }
+      .flink {
+        -webkit-transition: 0.2s ease;
+        transition: 0.2s ease;
+        margin: auto;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0 auto;
+        font-weight: 600;
+        color: #9ca3af;
+        text-decoration: none;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .flink i {
+        font-size: 1.5rem;
+      }
+      .card-left,
+      .card-right {
+        display: inline-block;
+      }
+      .card-left {
+        padding-left: 40px !important;
+        padding-right: 0 !important;
+      }
+      .card-left img {
+        border-radius: 20px;
+      }
+      .card-right {
+        padding-left: 30px !important;
+        padding-right: 0 !important;
+        width: 60%;
+      }
+      .blocked-img {
+        position: relative;
+      }
+      .blocked-img:after {
+        position: absolute;
+        content: url("assets/block.svg");
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        left: calc(50% + 20px);
+        transform: translate(-50%, -50%);
+      }
+      .s-text {
+        padding-bottom: 12px;
+        padding-left: 210px;
+      }
+      .t-btn {
+        padding: 20px 40px 30px !important;
+      }
+      .t-table td {
+        display: inline-block;
+      }
+      @supports (-webkit-background-clip: text) {
+        .g-text {
+          color: #32325D;
+          background: linear-gradient(45deg, #7000e9 0%, #ff00c5 22.63%, #ff0076 50.76%, #005ce3 100%); 
+          -webkit-background-clip: text; 
+          -webkit-text-fill-color: transparent; 
+        }
+      }
+      @media only screen and (max-width: 550px) {
+        .card-left,
+        .card-right {
+          display: block;
+          padding-left: 30px !important;
+        }
+        .card-left {
+          padding-bottom: 10px !important;
+        }
+        .card-right {
+          width: 100%;
+        }
+        .blocked-img {
+          display: inline-block;
+        }
+        .blocked-img:after {
+          top: 50%;
+        }
+        .s-text {
+          padding-left: 40px;
+        }
+        .card-left {
+          padding-left: 30px !important;
+        }
+        .t-btn {
+          padding: 20px 30px 30px !important;
+        }
+        .flink i {
+          font-size: 1.2rem;
+        }
+        .e-body tr td, 
+        .e-body tr th {
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+        }
+        .t-table td {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: #f6f6f6;
+  font-family: SharpSans-Semibold;
+  font-family: SharpSans-Bold;">
+    <div id="app">
+      <!-- Email Template 1 -->
+      <div v-if="eOne">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="37"
+                    height="32"
+                    viewBox="0 0 37 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.5983 24.2332C20.9254 24.2332 21.2283 24.3665 21.4585 24.5846C21.6766 24.8148 21.8099 25.1178 21.8099 25.4449C21.8099 25.7721 21.6766 26.075 21.4585 26.3052C21.2283 26.5233 20.9254 26.6566 20.5983 26.6566H6.05831C4.4468 26.6566 2.90799 26.0144 1.76903 24.8875C0.642181 23.7486 0 22.2098 0 20.5983V6.05831C0 4.4468 0.642181 2.90799 1.76903 1.76903C2.90799 0.642181 4.4468 0 6.05831 0H30.2916C31.9031 0 33.4419 0.642181 34.5808 1.76903C35.7077 2.90799 36.3499 4.4468 36.3499 6.05831V19.3866C36.3499 19.7137 36.2166 20.0167 35.9985 20.2469C35.7683 20.465 35.4654 20.5983 35.1382 20.5983C34.8111 20.5983 34.5081 20.465 34.2779 20.2469C34.0598 20.0167 33.9265 19.7137 33.9265 19.3866V6.05831C33.9265 5.08898 33.5388 4.16812 32.8603 3.48959C32.1818 2.81106 31.2609 2.42332 30.2916 2.42332H6.05831C5.08898 2.42332 4.16812 2.81106 3.48959 3.48959C2.81106 4.16812 2.42332 5.08898 2.42332 6.05831V20.5983C2.42332 21.5676 2.81106 22.4885 3.48959 23.167C4.16812 23.8455 5.08898 24.2332 6.05831 24.2332H20.5983Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      d="M34.593 4.97852C34.8838 4.83312 35.2109 4.80888 35.526 4.90582C35.8289 5.01487 36.0833 5.23297 36.2166 5.51165C36.362 5.80245 36.3862 6.12959 36.2893 6.44463C36.1803 6.74754 35.9622 7.00199 35.6835 7.13528L20.8891 14.5385C20.877 14.5385 20.8648 14.5506 20.8527 14.5506C20.0167 14.9384 19.0958 15.1322 18.175 15.1201C17.2541 15.1322 16.3332 14.9384 15.4972 14.5506C15.4851 14.5506 15.4729 14.5385 15.4608 14.5385L0.666432 7.13528C0.38775 7.00199 0.169651 6.74754 0.0606012 6.44463C-0.0363318 6.12959 -0.0120985 5.80245 0.133301 5.51165C0.266584 5.23297 0.521033 5.01487 0.823948 4.90582C1.13898 4.80888 1.46613 4.83312 1.75693 4.97852L16.5392 12.3575C17.0481 12.5999 17.6055 12.7089 18.175 12.6968C18.7444 12.7089 19.3018 12.5999 19.8107 12.3575L34.593 4.97852Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      d="M26.3052 25.7962L29.0799 28.583L34.278 23.3729C34.5082 23.1548 34.8111 23.0215 35.1382 23.0215C35.4654 23.0215 35.7683 23.1548 35.9985 23.3729C36.2166 23.6031 36.3499 23.906 36.3499 24.2331C36.3499 24.5603 36.2166 24.8632 35.9985 25.0934L29.0799 31.9999L24.5847 27.5168C24.3666 27.2865 24.2333 26.9836 24.2333 26.6565C24.2333 26.3293 24.3666 26.0264 24.5847 25.7962C24.8149 25.5781 25.1178 25.4448 25.4449 25.4448C25.7721 25.4448 26.075 25.5781 26.3052 25.7962Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="24.2333"
+                        y1="31.9999"
+                        x2="36.7815"
+                        y2="28.4788"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">Welcome to Cum Rocket</th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 30px; padding-left: 40px;">
+                  Hi John! You are almonst done to interect with others users.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  To verify your email check on the button below:
+                </td>
+              </tr>
+              <tr>
+                <td class="t-btn">
+                  <button
+                    style="background: linear-gradient(45deg, #7000e9 0%, #ff00c5 20.93%, #ff0076 45%, #005ce3 100%); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ color: #fff; padding: 13px 21px; border-radius: 100vh; border: none; font-weight: 700; font-family: SharpSans-Bold; opacity: 1; cursor: pointer; font-size: 0.875rem;"
+                    @click="fakeRouting('two')"
+                  >
+                    Verify Email
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 40px; padding-left: 40px;">
+                  If you did not create an account, no further action is
+                  required.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px;; padding-left: 40px;">Team CumRocket</td>
+              </tr>
+              <tr>
+                <td style="padding: 50px 5px 20px 5px">
+                  <hr style="border: 1px solid #d1d4da" />
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 19px; color: #525f7f; font-size: 14px; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  If you are having trouble clicking the "Verify Email Address"
+                  button, copy and paste the URL below into your web browser.
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 38px; font-size: 14px;
+                color: #101115;
+                font-family: SharpSans-Semibold;
+                line-height: 21px; padding-left: 40px;">cumrocket.io/verifyemail/kydkif</td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 1 -->
+
+      <!-- Email Template 2 -->
+      <div v-if="eTwo">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="33"
+                    height="32"
+                    viewBox="0 0 33 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M29.3987 12.8006H27.6589C27.1141 5.65162 21.1359 0 13.8543 0C6.21469 0 0 6.2197 0 13.8643C0 17.8942 1.72993 21.529 4.4848 24.0688C4.46978 23.8688 4.4548 23.6788 4.44479 23.5089C4.39978 22.7039 4.41479 21.8439 4.48977 20.984C2.97987 19.0041 2.08489 16.5392 2.08489 13.8643C2.08489 7.36963 7.36463 2.08491 13.8543 2.08491C19.9855 2.08491 25.0342 6.80273 25.5735 12.8006H23.9295C23.5284 12.8006 23.2777 13.2348 23.4783 13.5822L26.2129 18.3179C26.4134 18.6652 26.9147 18.6652 27.1153 18.3179L29.8499 13.5822C30.0505 13.2348 29.7998 12.8006 29.3987 12.8006Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      d="M16.5642 14.8194C14.5643 14.3894 12.0544 14.3894 10.0545 14.8144V11.8495C10.0545 10.0546 11.5145 8.59467 13.3093 8.59467C15.1043 8.59467 16.5642 10.0546 16.5642 11.8495V14.8194ZM19.4791 16.1293C19.2291 15.8793 18.9041 15.6643 18.5191 15.4693V11.8495C18.5191 8.97465 16.1842 6.63477 13.3093 6.63477C10.4345 6.63477 8.09961 8.97465 8.09961 11.8495V15.4693C7.71462 15.6643 7.38465 15.8793 7.13966 16.1293C4.95477 18.3092 4.73976 26.5288 7.13966 28.4687C8.72958 29.7536 12.5794 30.1886 15.6942 29.7687V25.1289C15.6942 23.9789 16.5342 23.024 17.6341 22.849V20.8091C17.6341 20.0341 18.2641 19.4091 19.0341 19.4091C19.4091 19.4091 19.759 19.5541 20.019 19.8191L21.119 20.9191C20.919 18.8792 20.359 17.0093 19.4791 16.1293ZM14.6043 24.5089H12.0144L12.4844 22.084C11.9344 21.789 11.5544 21.2091 11.5544 20.5341C11.5544 19.5691 12.3394 18.7842 13.3093 18.7842C14.2793 18.7842 15.0643 19.5691 15.0643 20.5341C15.0643 21.2091 14.6893 21.789 14.1343 22.084L14.6043 24.5089Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      d="M31.1915 23.8213H22.6101L19.3143 20.5255C19.0638 20.275 18.6355 20.4524 18.6355 20.8066V23.8213H17.9992C17.2781 23.8213 16.6935 24.4059 16.6935 25.1271V30.6935C16.6935 31.4146 17.2781 31.9992 17.9992 31.9992H31.1915C31.9126 31.9992 32.4972 31.4146 32.4972 30.6935V25.1271C32.4972 24.4059 31.9126 23.8213 31.1915 23.8213ZM20.6913 28.9592L20.1473 29.3387L19.5605 28.5533L18.9645 29.3387L18.4212 28.9592L19.0081 28.1218L18.1106 27.8456L18.3088 27.2155L19.1894 27.5089V26.4818H19.9232V27.5089L20.7946 27.2155L21.0019 27.8456L20.0953 28.1218L20.6913 28.9592ZM24.0507 28.9592L23.5067 29.3387L22.9199 28.5533L22.3239 29.3387L21.7806 28.9592L22.3675 28.1218L21.47 27.8456L21.6682 27.2155L22.5488 27.5089V26.4818H23.2825V27.5089L24.154 27.2155L24.3613 27.8456L23.4547 28.1218L24.0507 28.9592ZM27.4101 28.9592L26.8661 29.3387L26.2793 28.5533L25.6833 29.3387L25.14 28.9592L25.7269 28.1218L24.8294 27.8456L25.0276 27.2155L25.9082 27.5089V26.4818H26.6419V27.5089L27.5134 27.2155L27.7207 27.8456L26.8141 28.1218L27.4101 28.9592ZM30.7695 28.9592L30.2255 29.3387L29.6387 28.5533L29.0427 29.3387L28.4994 28.9592L29.0863 28.1218L28.1888 27.8456L28.387 27.2155L29.2676 27.5089V26.4818H30.0013V27.5089L30.8728 27.2155L31.0801 27.8456L30.1735 28.1218L30.7695 28.9592Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="16.6935"
+                        y1="31.9992"
+                        x2="33.0355"
+                        y2="27.3663"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">Reset your password</th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-left: 40px;" style="padding-bottom: 30px">
+                  A request has been received to change the password for your
+                  CumRocket Account.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  To reset your account click on the button below:
+                </td>
+              </tr>
+              <tr>
+                <td class="t-btn">
+                  <button
+                    style="background: linear-gradient(45deg, #7000e9 0%, #ff00c5 20.93%, #ff0076 45%, #005ce3 100%); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ color: #fff; padding: 13px 21px; border-radius: 100vh; border: none; font-weight: 700; font-family: SharpSans-Bold; opacity: 1; cursor: pointer; font-size: 0.875rem;"
+                    @click="fakeRouting('three')"
+                  >
+                    Reset Password
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  If you did not initate this request, please contact us
+                  immediately at
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 50px; font-size: 14px; color: #4e82ee; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  <a href="mailto:support@cumrocket.io" style="text-decoration: none; color: #4e82ee">support@cumrocket.io</a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 2 -->
+
+      <!-- Email Template 3 -->
+      <div v-if="eThree">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="31"
+                    height="36"
+                    viewBox="0 0 31 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.7383 6.80859C9.85731 6.80859 7.51343 9.15251 7.51343 12.0335C7.51343 14.9144 9.85731 17.2583 12.7383 17.2583C15.6192 17.2583 17.9639 14.9144 17.9639 12.0335C17.9639 9.15251 15.6192 6.80859 12.7383 6.80859ZM12.7383 9.44911C13.5311 9.44911 14.1821 10.0993 14.1821 10.8922C14.1821 11.685 13.5311 12.3352 12.7383 12.3352C11.9454 12.3352 11.2952 11.685 11.2952 10.8922C11.2952 10.0993 11.9454 9.44911 12.7383 9.44911ZM12.7383 10.2694C12.3885 10.2694 12.1155 10.5424 12.1155 10.8922C12.1155 11.242 12.3884 11.515 12.7383 11.515C13.0882 11.515 13.3611 11.242 13.3611 10.8922C13.3611 10.5424 13.0881 10.2694 12.7383 10.2694ZM10.2623 12.0527H11.0825V13.7975H14.3948V12.0527H15.2151V14.6186H10.2623V12.1418V12.0527Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.23041 19.6465V19.7364V20.4675H19.2476V19.6465H6.23041Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.23047 22.8574V22.9473V23.6785H17.4209C17.6975 23.3829 17.9943 23.1082 18.3126 22.8574H6.23047Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 0V0.410925V33.6958H16.7404C16.5529 33.432 16.3767 33.1601 16.2219 32.874H0.821849V0.821849H24.6555V21.2838C24.9346 21.3349 25.2091 21.3986 25.4773 21.478V0H0Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.23047 26.0664V26.1563V26.8874H15.5886C15.67 26.6075 15.7631 26.3328 15.8736 26.0664H6.23047Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      d="M23.2224 22.2051C19.4178 22.2051 16.325 25.2987 16.325 29.1033C16.325 32.9078 19.4178 36.0007 23.2224 36.0007C27.0269 36.0007 30.1198 32.9078 30.1198 29.1033C30.1198 25.2987 27.0269 22.2051 23.2224 22.2051ZM23.2224 23.0269C26.5828 23.0269 29.298 25.7429 29.298 29.1033C29.298 32.4637 26.5828 35.1789 23.2224 35.1789C19.862 35.1789 17.1468 32.4637 17.1468 29.1033C17.1468 25.7429 19.862 23.0269 23.2224 23.0269Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20.0263 29.5385L21.4791 30.9913L22.0603 31.5725L26.4188 27.214L25.8377 26.6328L22.0603 30.4102L20.6074 28.9574L20.0263 29.5385Z"
+                      fill="url(#paint1_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="16.325"
+                        y1="36.0007"
+                        x2="31.0975"
+                        y2="32.9292"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint1_linear"
+                        x1="20.0263"
+                        y1="31.5725"
+                        x2="26.6856"
+                        y2="29.7805"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">Hi, Tara!</th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 30px; padding-left: 40px;">
+                  There is last few steps there to submit your NFT creator
+                  application
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  You need to finish your KYC so we can proceed verifying your
+                  profile to mint NFTs.
+                </td>
+              </tr>
+              <tr>
+                <td class="t-btn">
+                  <button
+                    style="background: linear-gradient(45deg, #7000e9 0%, #ff00c5 20.93%, #ff0076 45%, #005ce3 100%); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ color: #fff; padding: 13px 21px; border-radius: 100vh; border: none; font-weight: 700; font-family: SharpSans-Bold; opacity: 1; cursor: pointer; font-size: 0.875rem;"
+                    @click="fakeRouting('four')"
+                  >
+                    Finish your KYC
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  If you are facing any challanges there, please contact us at
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 42px; font-size: 14px; color: #4e82ee; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  <a href="mailto:support@cumrocket.io" style="text-decoration: none; color: #4e82ee;">support@cumrocket.io</a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;" >
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 3 -->
+
+      <!-- Email Template 4 -->
+      <div v-if="eFour">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M31.5056 32.4944C31.5056 32.9888 31.1011 33.3933 30.6067 33.3933C30.1124 33.3933 29.7079 32.9888 29.7079 32.4944C29.7079 32 30.1124 31.5955 30.6067 31.5955C31.1011 31.5955 31.5056 32 31.5056 32.4944ZM22.0225 32C21.5281 32 21.1236 32.4045 21.1236 32.8989C21.1236 33.3933 21.5281 33.7978 22.0225 33.7978C22.5169 33.7978 22.9213 33.3933 22.9213 32.8989C22.8764 32.3596 22.5169 32 22.0225 32ZM10.9663 22.1573C10.4719 22.1573 10.0674 22.5618 10.0674 23.0562C10.0674 23.5506 10.4719 23.9551 10.9663 23.9551C11.4607 23.9551 11.8652 23.5506 11.8652 23.0562C11.8652 22.5618 11.4607 22.1573 10.9663 22.1573ZM34.9663 24.6742C34.4719 24.6742 34.0674 25.0787 34.0674 25.573C34.0674 26.0674 34.4719 26.4719 34.9663 26.4719C35.4607 26.4719 35.8652 26.0674 35.8652 25.573C35.8652 25.0787 35.4607 24.6742 34.9663 24.6742ZM19.6854 13.8876C19.6854 14.382 20.0899 14.7865 20.5843 14.7865C21.0787 14.7865 21.4831 14.382 21.4831 13.8876C21.4831 13.3933 21.0787 12.9888 20.5843 12.9888C20.0899 12.9888 19.6854 13.3933 19.6854 13.8876ZM28.2697 7.32584C28.764 7.32584 29.1685 6.92135 29.1685 6.42697C29.1685 5.93258 28.764 5.52809 28.2697 5.52809C27.7753 5.52809 27.3708 5.93258 27.3708 6.42697C27.3708 6.92135 27.7753 7.32584 28.2697 7.32584ZM32.4045 15.5056C31.9101 15.5056 31.5056 15.9101 31.5056 16.4045C31.5056 16.8989 31.9101 17.3034 32.4045 17.3034C32.8989 17.3034 33.3034 16.8989 33.3034 16.4045C33.3034 15.9101 32.8539 15.5056 32.4045 15.5056ZM11.8652 12.6292C12.3595 12.6292 12.764 12.2247 12.764 11.7303C12.764 11.236 12.3595 10.8315 11.8652 10.8315C11.3708 10.8315 10.9663 11.236 10.9663 11.7303C10.9663 12.2247 11.3708 12.6292 11.8652 12.6292ZM13.618 1.79775C14.1124 1.79775 14.5169 1.39326 14.5169 0.898876C14.5169 0.404494 14.1124 0 13.618 0C13.1236 0 12.7191 0.404494 12.7191 0.898876C12.7191 1.39326 13.1236 1.79775 13.618 1.79775ZM7.05618 17.9775C7.05618 18.4719 7.46067 18.8764 7.95506 18.8764C8.44944 18.8764 8.85393 18.4719 8.85393 17.9775C8.85393 17.4831 8.44944 17.0787 7.95506 17.0787C7.46067 17.0787 7.05618 17.4831 7.05618 17.9775ZM7.05618 6.74157C7.55056 6.74157 7.95506 6.33708 7.95506 5.8427C7.95506 5.34831 7.55056 4.94382 7.05618 4.94382C6.5618 4.94382 6.1573 5.34831 6.1573 5.8427C6.1573 6.33708 6.5618 6.74157 7.05618 6.74157ZM0.898876 25.3933C0.404494 25.3933 0 25.7978 0 26.2921C0 26.7865 0.404494 27.191 0.898876 27.191C1.39326 27.191 1.79775 26.7865 1.79775 26.2921C1.75281 25.7978 1.34831 25.3933 0.898876 25.3933ZM16.809 5.79775C16.7191 5.16854 16.9888 4.58427 17.5281 4.26966C18.0674 3.95506 18.7416 4.04494 19.236 4.44944C19.3708 4.53933 19.5056 4.7191 19.6404 4.94382C19.6854 4.31461 19.4157 3.59551 18.8764 2.83146C18.7416 2.65169 18.7865 2.38202 18.9663 2.24719C19.1461 2.11236 19.4157 2.1573 19.5506 2.33708C20.9888 4.35955 20.4045 5.75281 20.0899 6.24719C20.0899 6.24719 20.0899 6.29214 20.0449 6.29214C20.1348 7.01124 20.0449 8 19.6404 9.34832C19.5955 9.52809 19.4157 9.66292 19.236 9.66292C19.191 9.66292 19.1461 9.66292 19.1011 9.66292C18.8764 9.57303 18.7416 9.34832 18.8315 9.1236C19.1011 8.26966 19.191 7.59551 19.236 7.05618C18.8764 7.19101 18.427 7.2809 17.9775 7.14607C17.3483 7.01124 16.8989 6.51685 16.809 5.79775ZM17.7079 5.70787C17.7528 6.06742 17.9326 6.29214 18.2022 6.33708C18.4719 6.38202 18.9213 6.29213 19.236 6.02247C19.1011 5.48315 18.8764 5.25843 18.7416 5.16854C18.6067 5.03371 18.427 4.98876 18.2921 4.98876C18.1573 4.98876 18.0674 5.03371 17.9775 5.07865C17.7528 5.16854 17.6629 5.39326 17.7079 5.70787ZM32.9888 20.6292C32.8989 20.8539 32.6292 20.9438 32.4045 20.8539C28.6742 19.3258 25.0337 20.3596 22.9213 21.3034C23.3258 21.7978 23.6404 22.2921 23.9551 22.7865C25.2135 22.3371 26.2022 22.6966 26.6966 22.9213C26.9663 23.0562 27.191 23.191 27.4157 23.3708C28.3146 23.0112 29.618 22.7865 31.191 22.8315C31.4157 22.8315 31.6404 23.0112 31.6404 23.2809C31.6404 23.5056 31.4607 23.7303 31.191 23.7303C31.191 23.7303 31.1011 23.7303 31.0562 23.7303C29.618 23.7303 28.6742 23.9101 28.0449 24.0899C28.4944 24.6742 28.7191 25.3483 28.5843 25.8876C28.4494 26.382 28.0899 26.6966 27.5056 26.6966C26.8764 26.6966 26.3371 26.382 26.0225 25.8876C25.7528 25.4382 25.7528 24.8989 26.0225 24.4494C26.1573 24.2247 26.2921 24.0449 26.5169 23.8652C26.427 23.8202 26.3371 23.7753 26.2472 23.7303C25.618 23.4157 24.9888 23.3708 24.3146 23.5506C25.3034 25.3483 25.6629 26.8764 24.8989 27.6854C24.809 27.7753 24.6742 27.8652 24.5393 27.9551C24.5393 27.9551 24.5393 27.9551 24.4944 28C24.3596 28.0449 9.79775 34.2022 6.06742 35.8652C5.8427 35.9551 5.61798 36 5.39326 36C4.53933 36 3.86517 35.3258 3.86517 34.4719C3.86517 34.2921 3.91011 34.0674 4 33.8876L10.9213 14.6517C10.9213 14.6517 10.9213 14.6067 10.9663 14.6067C11.0562 14.382 11.1461 14.2022 11.2809 14.0674C12.0899 13.2135 13.7978 13.7079 15.7303 14.8315C15.6854 13.1236 15.4157 11.3258 14.5618 9.97753C13.8876 8.89888 12.8989 8.17978 11.6404 7.91011C11.4157 7.86517 11.236 7.64045 11.3258 7.41573C11.3708 7.19101 11.5955 7.01124 11.8202 7.10112C13.3483 7.41573 14.5169 8.22472 15.3258 9.52809C16.3595 11.191 16.6742 13.4382 16.6292 15.4157C17.8876 16.2697 19.236 17.3933 20.4045 18.5618C21.0337 19.191 21.6629 19.9101 22.2472 20.5843C24.4494 19.5506 28.4494 18.2921 32.6292 20.0449C32.9888 20.1798 33.0787 20.4045 32.9888 20.6292ZM26.8764 25.4831C27.0112 25.7079 27.2809 25.8427 27.5955 25.8427C27.7753 25.8427 27.8202 25.7978 27.8202 25.7079C27.8652 25.4831 27.6854 24.9438 27.2809 24.4944C27.0112 24.6742 26.9213 24.809 26.8764 24.8989C26.7865 25.1685 26.8315 25.3483 26.8764 25.4831ZM22.6517 27.9101C22.2472 27.7753 21.7528 27.5506 21.2584 27.2809C19.5955 26.427 17.7528 24.9438 15.9551 23.191C14.2022 21.4382 12.7191 19.5506 11.8652 17.8876C11.6404 17.4382 11.4607 17.0337 11.2809 16.6292L4.94382 34.2472C4.94382 34.2472 4.94382 34.2472 4.94382 34.2921C4.94382 34.3371 4.89888 34.427 4.89888 34.4719C4.89888 34.8315 5.16854 35.1011 5.52809 35.1011C5.61798 35.1011 5.66292 35.1011 5.75281 35.0562L5.8427 35.0112H5.88764C8.94382 33.7079 18.6966 29.573 22.6517 27.9101ZM22.1573 21.7079C21.5281 22.0674 21.1236 22.3371 21.1236 22.3371C21.0337 22.382 20.9438 22.427 20.8539 22.427C20.7191 22.427 20.5843 22.382 20.4944 22.2472C20.3595 22.0674 20.4045 21.7978 20.5843 21.6629C20.6292 21.618 20.9888 21.3933 21.573 21.0787C21.0787 20.4944 20.5393 19.8652 19.9101 19.2809C18.7865 18.1573 17.7079 17.2584 16.7191 16.5393C16.5843 18.5618 16.2247 20.1798 16.1798 20.3146C16.1348 20.4944 15.9551 20.6292 15.7753 20.6292C15.7303 20.6292 15.6854 20.6292 15.6854 20.6292C15.4607 20.5843 15.3258 20.3596 15.3708 20.0899C15.3708 20.0449 15.8202 18.2022 15.9101 15.9551C14.4719 15.0562 13.3483 14.6067 12.6292 14.6067C12.3595 14.6067 12.1798 14.6517 12.0449 14.7865C11.7753 15.0562 11.7753 15.9551 12.6292 17.573C13.4831 19.1461 14.8764 20.9438 16.5843 22.6517C18.2921 24.3596 20.0899 25.7528 21.6629 26.6067C23.2809 27.4607 24.1798 27.4607 24.4494 27.191C24.8539 26.7865 24.5843 25.618 23.6854 24.0449C23.1461 24.3596 22.6067 24.809 22.0674 25.4382C21.9326 25.618 21.618 25.6629 21.4382 25.4831C21.2584 25.3483 21.2135 25.0337 21.3933 24.8539C22.0225 24.0899 22.6517 23.5955 23.191 23.2809C22.9213 22.7416 22.5618 22.2472 22.1573 21.7079ZM20.8539 16.6742C20.9438 16.764 21.0337 16.809 21.1685 16.809C21.3034 16.809 21.3933 16.764 21.4831 16.6742C26.0674 11.9551 26.1573 6.69663 26.1573 6.47191C26.1573 6.24719 25.9775 6.02247 25.7079 6.02247C25.4831 6.02247 25.2584 6.20225 25.2584 6.47191C25.2584 6.51685 25.1685 11.6404 20.8539 16.0899C20.6742 16.2247 20.6742 16.4944 20.8539 16.6742ZM35.3708 10.0674C34.1124 13.3933 32.4494 13.7528 31.5506 13.6629C31.4607 13.6629 31.4157 13.6629 31.3258 13.618C30.6517 14.1573 29.6629 14.6966 28.1348 15.236C28.0899 15.236 28.0449 15.2809 28 15.2809C27.8202 15.2809 27.6404 15.1461 27.5955 14.9663C27.5056 14.7416 27.6404 14.4719 27.8652 14.427C28.9888 14.0674 29.7978 13.6629 30.382 13.2584C29.9326 12.8989 29.618 12.4045 29.5281 11.9551C29.3933 11.3258 29.7079 10.7416 30.2921 10.4719C30.8764 10.1573 31.5506 10.2022 32 10.5169C32.4045 10.8315 32.6292 11.3258 32.5393 11.8652C32.4944 12.0899 32.4045 12.4045 32.1798 12.764C33.0787 12.4944 33.9326 11.4607 34.5618 9.75281C34.6517 9.52809 34.9213 9.4382 35.1011 9.48315C35.3708 9.57303 35.4607 9.8427 35.3708 10.0674ZM31.5056 11.191C31.4157 11.1011 31.2809 11.1011 31.1461 11.1011C31.0112 11.1011 30.8315 11.1461 30.6966 11.236C30.4719 11.3708 30.382 11.5506 30.427 11.7753C30.4719 12.0899 30.7416 12.4494 31.1461 12.6292C31.5056 12.2697 31.6404 11.9551 31.6854 11.6854C31.7303 11.5056 31.6854 11.3258 31.5056 11.191Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="-1.20795e-06"
+                        y1="36"
+                        x2="38.4188"
+                        y2="28.0415"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">Congratulations Tara!</th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 30px; padding-left: 40px;">
+                  You all set to mint your first NFT.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  Your craeator profile is approved, now you can mint NFT.
+                </td>
+              </tr>
+              <tr>
+                <td class="t-btn" style="margin-bottom: 80px !important">
+                  <button
+                    style="background: linear-gradient(45deg, #7000e9 0%, #ff00c5 20.93%, #ff0076 45%, #005ce3 100%); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ color: #fff; padding: 13px 21px; border-radius: 100vh; border: none; font-weight: 700; font-family: SharpSans-Bold; opacity: 1; cursor: pointer; font-size: 0.875rem;"
+                    @click="fakeRouting('five')"
+                  >
+                    Mint your first NFT
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 4 -->
+
+      <!-- Email Template 5 -->
+      <div v-if="eFive">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" @click="fakeRouting('six')" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="31"
+                    height="36"
+                    viewBox="0 0 31 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 0C0 11.2319 0 22.4638 0 33.6958H16.7403C16.5528 33.432 16.3767 33.1601 16.2219 32.8739H0.821848V0.821848H24.6554V21.2838C24.9346 21.3348 25.2091 21.3985 25.4773 21.478V0H0Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.23047 19.6465C6.23047 19.9202 6.23047 20.1938 6.23047 20.4676H19.2476V19.6465H6.23047Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.23047 22.8574C6.23047 23.1311 6.23047 23.4048 6.23047 23.6784H17.4209C17.6974 23.3829 17.9943 23.1082 18.3126 22.8574H6.23047Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10.2625 12.0527V12.1418V14.6186H15.2152V12.0527H14.395V13.7976H11.0827V12.0527H10.2625Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M12.7385 9.44922C11.9456 9.44922 11.2954 10.0994 11.2954 10.8923C11.2954 11.6851 11.9456 12.3353 12.7385 12.3353C13.5313 12.3353 14.1823 11.6851 14.1823 10.8923C14.1823 10.0994 13.5313 9.44922 12.7385 9.44922ZM12.7385 10.2695C13.0883 10.2695 13.3613 10.5425 13.3613 10.8923C13.3613 11.2421 13.0884 11.5151 12.7385 11.5151C12.3886 11.5151 12.1157 11.2421 12.1157 10.8923C12.1157 10.5425 12.3887 10.2695 12.7385 10.2695Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M12.7385 6.80859C9.85755 6.80859 7.51367 9.15247 7.51367 12.0334C7.51367 14.9144 9.85755 17.2583 12.7385 17.2583C15.6195 17.2583 17.9641 14.9144 17.9641 12.0334C17.9641 9.15247 15.6195 6.80859 12.7385 6.80859ZM12.7385 7.62884C15.1759 7.62884 17.1431 9.596 17.1431 12.0334C17.1431 14.4709 15.1759 16.438 12.7385 16.438C10.3011 16.438 8.33472 14.4709 8.33472 12.0334C8.33472 9.596 10.3011 7.62884 12.7385 7.62884Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.23047 26.0664C6.23047 26.3401 6.23047 26.6138 6.23047 26.8875H15.5886C15.67 26.6075 15.7631 26.3328 15.8735 26.0664H6.23047Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M23.2224 22.2051C22.3165 22.2051 21.4196 22.3836 20.5827 22.7302C19.7458 23.0769 18.9854 23.5851 18.3449 24.2256C17.7045 24.8662 17.1964 25.6267 16.8498 26.4636C16.5032 27.3005 16.3249 28.1975 16.325 29.1033C16.325 30.9326 17.0517 32.6869 18.3452 33.9804C19.6387 35.2739 21.3931 36.0006 23.2224 36.0007C24.1282 36.0008 25.0252 35.8225 25.8621 35.4759C26.699 35.1293 27.4595 34.6212 28.1 33.9807C28.7406 33.3403 29.2487 32.5799 29.5954 31.743C29.9421 30.9061 30.1206 30.0092 30.1206 29.1033C30.1207 28.1974 29.9423 27.3003 29.5957 26.4634C29.249 25.6264 28.7409 24.8659 28.1003 24.2254C27.4598 23.5848 26.6993 23.0767 25.8623 22.73C25.0253 22.3834 24.1283 22.205 23.2224 22.2051ZM21.3339 26.6329L23.2224 28.5215L25.1109 26.6329L25.6919 27.214L23.8035 29.1025L25.6919 30.9918L25.1109 31.5728L23.2224 29.6844L21.3339 31.5728L20.7528 30.9918L22.6413 29.1025L20.7528 27.214L21.3339 26.6329Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="16.325"
+                        y1="36.0007"
+                        x2="31.0983"
+                        y2="32.9289"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">Sorry Tara!</th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 20px; padding-left: 40px;">
+                  It can’t be done right now.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 30px; padding-left: 40px;">
+                  Your application for creator is rejected .
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 10px; padding-left: 40px;">
+                  Rejection Reason
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 70px; color: #525f7f; font-size: 14px; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  Lorem Ipsum doesn’t exist because people think the content is
+                  meaningless window dressing, only there to be decorated by
+                  designers who can’t be bothered to read. Lorem Ipsum exists
+                  because words are powerful.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 5 -->
+
+      <!-- Email Template 6 -->
+      <div v-if="eSix">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="38"
+                    height="36"
+                    viewBox="0 0 38 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.07078 6.20064H8.69161C8.85626 6.20064 9.01417 6.13523 9.1306 6.0188C9.24703 5.90238 9.31244 5.74447 9.31244 5.57981C9.31244 5.41516 9.24703 5.25725 9.1306 5.14082C9.01417 5.02439 8.85626 4.95898 8.69161 4.95898H8.07078C7.90613 4.95898 7.74822 5.02439 7.63179 5.14082C7.51536 5.25725 7.44995 5.41516 7.44995 5.57981C7.44995 5.74447 7.51536 5.90238 7.63179 6.0188C7.74822 6.13523 7.90613 6.20064 8.07078 6.20064Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <path
+                      d="M36.008 28.6645V8.06274C36.0071 7.23977 35.6797 6.45078 35.0978 5.86885C34.5158 5.28692 33.7269 4.95957 32.9039 4.9586H22.1229C21.3894 3.20183 20.357 1.58552 19.0713 0.181453C18.9518 0.0651049 18.7916 0 18.6248 0C18.458 0 18.2978 0.0651049 18.1783 0.181453C16.8927 1.58552 15.8602 3.20183 15.1268 4.9586H11.1749C11.0103 4.9586 10.8523 5.02401 10.7359 5.14044C10.6195 5.25687 10.5541 5.41477 10.5541 5.57943C10.5541 5.74408 10.6195 5.90199 10.7359 6.01842C10.8523 6.13485 11.0103 6.20026 11.1749 6.20026H14.6994C14.5809 6.60827 14.4863 7.02286 14.4161 7.44191H4.3458C4.18114 7.44191 4.02323 7.50732 3.9068 7.62375C3.79038 7.74018 3.72497 7.89809 3.72497 8.06274V26.6876C3.72497 26.8522 3.79038 27.0101 3.9068 27.1266C4.02323 27.243 4.18114 27.3084 4.3458 27.3084H32.9039C33.0685 27.3084 33.2264 27.243 33.3429 27.1266C33.4593 27.0101 33.5247 26.8522 33.5247 26.6876V8.06274C33.5247 7.89809 33.4593 7.74018 33.3429 7.62375C33.2264 7.50732 33.0685 7.44191 32.9039 7.44191H22.8336C22.7634 7.02286 22.6688 6.60827 22.5503 6.20026H32.9039C33.3977 6.2008 33.8711 6.3972 34.2203 6.74636C34.5694 7.09553 34.7658 7.56895 34.7664 8.06274V28.5501H22.9706C22.806 28.5501 22.6481 28.6155 22.5316 28.7319C22.4152 28.8483 22.3498 29.0062 22.3498 29.1709V30.4125H14.8999V29.1709C14.8999 29.0062 14.8345 28.8483 14.718 28.7319C14.6016 28.6155 14.4437 28.5501 14.279 28.5501H2.48331V8.06274C2.48385 7.56895 2.68025 7.09553 3.02942 6.74636C3.37859 6.3972 3.852 6.2008 4.3458 6.20026H6.20828C6.37293 6.20026 6.53084 6.13485 6.64727 6.01842C6.7637 5.90199 6.82911 5.74408 6.82911 5.57943C6.82911 5.41477 6.7637 5.25687 6.64727 5.14044C6.53084 5.02401 6.37293 4.9586 6.20828 4.9586H4.3458C3.52282 4.95957 2.73384 5.28692 2.15191 5.86885C1.56998 6.45078 1.24263 7.23977 1.24166 8.06274V28.6645C0.879549 28.792 0.565799 29.0285 0.343481 29.3415C0.121163 29.6545 0.00117857 30.0286 0 30.4125V31.6542C0.00128172 32.8064 0.459553 33.911 1.27427 34.7257C2.08899 35.5404 3.19361 35.9987 4.3458 36H32.9039C34.0561 35.9987 35.1607 35.5404 35.9754 34.7257C36.7901 33.911 37.2484 32.8064 37.2497 31.6542V30.4125C37.2485 30.0286 37.1285 29.6545 36.9062 29.3415C36.6839 29.0285 36.3701 28.792 36.008 28.6645ZM15.4736 17.3752H11.8573C12.0006 16.6809 12.377 16.0564 12.9239 15.6054C13.4709 15.1544 14.1555 14.9038 14.8644 14.8953C15.0129 15.7344 15.2164 16.5628 15.4736 17.3752ZM16.5761 16.7543H20.6736C20.5542 17.1838 20.391 17.5998 20.1867 17.996H17.0631C16.8587 17.5998 16.6955 17.1838 16.5761 16.7543ZM22.3851 14.895C23.094 14.9035 23.7786 15.1542 24.3254 15.6053C24.8722 16.0564 25.2484 16.6809 25.3915 17.3752H21.7761C22.0333 16.5627 22.2367 15.7342 22.3851 14.895ZM18.6248 1.5577C19.5791 2.71934 21.729 5.70192 21.729 8.99882C21.6986 11.1891 21.4518 13.371 20.9921 15.5127H16.2576C15.7979 13.371 15.5511 11.1891 15.5207 8.99882C15.5207 5.70192 17.6706 2.71934 18.6248 1.5577ZM32.2831 8.68357V26.0668H4.96662V8.68357H14.2942C14.2905 8.78911 14.279 8.89254 14.279 8.99882C14.3017 10.5599 14.4289 12.1178 14.6598 13.6619C13.551 13.7222 12.5074 14.2051 11.7438 15.0112C10.9801 15.8174 10.5543 16.8855 10.5541 17.996C10.5541 18.1606 10.6195 18.3186 10.7359 18.435C10.8523 18.5514 11.0103 18.6168 11.1749 18.6168H15.9907C16.0628 18.7481 16.1441 18.8741 16.234 18.9939C16.2919 19.0697 16.3666 19.1311 16.4521 19.1734C16.5377 19.2157 16.6318 19.2377 16.7272 19.2376H20.5225C20.6179 19.2377 20.712 19.2157 20.7976 19.1734C20.8831 19.1311 20.9578 19.0697 21.0157 18.9939C21.1056 18.8741 21.1869 18.7481 21.259 18.6168H26.0748C26.2394 18.6168 26.3973 18.5514 26.5138 18.435C26.6302 18.3186 26.6956 18.1606 26.6956 17.996C26.6937 16.8861 26.2674 15.8189 25.504 15.0132C24.7407 14.2075 23.698 13.7243 22.5898 13.6626C22.8207 12.1183 22.948 10.5602 22.9706 8.99882C22.9706 8.89254 22.9592 8.78905 22.9555 8.68357H32.2831ZM36.008 31.6542C36.0071 32.4772 35.6797 33.2662 35.0978 33.8481C34.5158 34.43 33.7269 34.7574 32.9039 34.7583H4.3458C3.52282 34.7574 2.73384 34.43 2.15191 33.8481C1.56998 33.2662 1.24263 32.4772 1.24166 31.6542V30.4125C1.24187 30.248 1.30735 30.0902 1.42373 29.9738C1.54011 29.8574 1.6979 29.7919 1.86248 29.7917H13.6582V31.0334C13.6582 31.198 13.7236 31.3559 13.8401 31.4724C13.9565 31.5888 14.1144 31.6542 14.279 31.6542H22.9706C23.1353 31.6542 23.2932 31.5888 23.4096 31.4724C23.5261 31.3559 23.5915 31.198 23.5915 31.0334V29.7917H35.3872C35.5518 29.7919 35.7096 29.8574 35.826 29.9738C35.9423 30.0902 36.0078 30.248 36.008 30.4125V31.6542Z"
+                      fill="#525F7F"
+                    />
+                    <path
+                      d="M18.6248 19.5469C18.0989 19.5824 17.6083 19.824 17.2595 20.2193C16.9108 20.6145 16.7321 21.1314 16.7623 21.6577C16.7623 22.6071 17.8724 24.473 18.0949 24.8373C18.1504 24.9281 18.2282 25.0032 18.321 25.0552C18.4138 25.1073 18.5184 25.1346 18.6248 25.1346C18.7312 25.1346 18.8358 25.1073 18.9286 25.0552C19.0214 25.0032 19.0992 24.9281 19.1547 24.8373C19.3772 24.4729 20.4873 22.6071 20.4873 21.6577C20.5175 21.1314 20.3389 20.6145 19.9901 20.2193C19.6414 19.824 19.1507 19.5824 18.6248 19.5469ZM18.6248 23.247C18.3323 22.7548 18.1225 22.2179 18.004 21.6577C18.004 21.1866 18.2883 20.7885 18.6248 20.7885C18.9613 20.7885 19.2456 21.1865 19.2456 21.6577C19.1271 22.2179 18.9174 22.7548 18.6248 23.247Z"
+                      fill="url(#paint1_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="7.44995"
+                        y1="6.20064"
+                        x2="9.34619"
+                        y2="5.60921"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint1_linear"
+                        x1="16.759"
+                        y1="25.1346"
+                        x2="20.8489"
+                        y2="24.5667"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">
+                  NFT published successfully in Marketplace!
+                </th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 30px; padding-left: 40px;">
+                  It's live for all.
+                </td>
+              </tr>
+              <tr style="margin-bottom: 55px; display: inline-block; vertical-align: bottom; width: 100%;">
+                <td class="card-left">
+                  <img src="assets/card-img.png" alt="" style="max-width: 140px;" />
+                </td>
+                <td class="card-right">
+                  <p style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #32325d; padding-bottom: 10px">
+                    CumRocket Babes/ Evermoon
+                  </p>
+                  <p class="g-text"
+                    style="font-size: 16px; padding-bottom: 30px; color: #32325D; font-size: 16px; line-height: 20px; font-family: SharpSans-Bold;"
+                  >
+                    12000 CUMMIES
+                  </p>
+                  <button
+                    style="background: linear-gradient(45deg, #7000e9 0%, #ff00c5 20.93%, #ff0076 45%, #005ce3 100%); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ color: #fff; padding: 13px 21px; border-radius: 100vh; border: none; font-weight: 700; font-family: SharpSans-Bold; opacity: 1; cursor: pointer; font-size: 0.875rem;"
+                    @click="fakeRouting('seven')"
+                  >
+                    View NFT
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 6 -->
+
+      <!-- Email Template 7 -->
+      <div v-if="eSeven">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M31.5056 32.4944C31.5056 32.9888 31.1011 33.3933 30.6067 33.3933C30.1124 33.3933 29.7079 32.9888 29.7079 32.4944C29.7079 32 30.1124 31.5955 30.6067 31.5955C31.1011 31.5955 31.5056 32 31.5056 32.4944ZM22.0225 32C21.5281 32 21.1236 32.4045 21.1236 32.8989C21.1236 33.3933 21.5281 33.7978 22.0225 33.7978C22.5169 33.7978 22.9213 33.3933 22.9213 32.8989C22.8764 32.3596 22.5169 32 22.0225 32ZM10.9663 22.1573C10.4719 22.1573 10.0674 22.5618 10.0674 23.0562C10.0674 23.5506 10.4719 23.9551 10.9663 23.9551C11.4607 23.9551 11.8652 23.5506 11.8652 23.0562C11.8652 22.5618 11.4607 22.1573 10.9663 22.1573ZM34.9663 24.6742C34.4719 24.6742 34.0674 25.0787 34.0674 25.573C34.0674 26.0674 34.4719 26.4719 34.9663 26.4719C35.4607 26.4719 35.8652 26.0674 35.8652 25.573C35.8652 25.0787 35.4607 24.6742 34.9663 24.6742ZM19.6854 13.8876C19.6854 14.382 20.0899 14.7865 20.5843 14.7865C21.0787 14.7865 21.4831 14.382 21.4831 13.8876C21.4831 13.3933 21.0787 12.9888 20.5843 12.9888C20.0899 12.9888 19.6854 13.3933 19.6854 13.8876ZM28.2697 7.32584C28.764 7.32584 29.1685 6.92135 29.1685 6.42697C29.1685 5.93258 28.764 5.52809 28.2697 5.52809C27.7753 5.52809 27.3708 5.93258 27.3708 6.42697C27.3708 6.92135 27.7753 7.32584 28.2697 7.32584ZM32.4045 15.5056C31.9101 15.5056 31.5056 15.9101 31.5056 16.4045C31.5056 16.8989 31.9101 17.3034 32.4045 17.3034C32.8989 17.3034 33.3034 16.8989 33.3034 16.4045C33.3034 15.9101 32.8539 15.5056 32.4045 15.5056ZM11.8652 12.6292C12.3595 12.6292 12.764 12.2247 12.764 11.7303C12.764 11.236 12.3595 10.8315 11.8652 10.8315C11.3708 10.8315 10.9663 11.236 10.9663 11.7303C10.9663 12.2247 11.3708 12.6292 11.8652 12.6292ZM13.618 1.79775C14.1124 1.79775 14.5169 1.39326 14.5169 0.898876C14.5169 0.404494 14.1124 0 13.618 0C13.1236 0 12.7191 0.404494 12.7191 0.898876C12.7191 1.39326 13.1236 1.79775 13.618 1.79775ZM7.05618 17.9775C7.05618 18.4719 7.46067 18.8764 7.95506 18.8764C8.44944 18.8764 8.85393 18.4719 8.85393 17.9775C8.85393 17.4831 8.44944 17.0787 7.95506 17.0787C7.46067 17.0787 7.05618 17.4831 7.05618 17.9775ZM7.05618 6.74157C7.55056 6.74157 7.95506 6.33708 7.95506 5.8427C7.95506 5.34831 7.55056 4.94382 7.05618 4.94382C6.5618 4.94382 6.1573 5.34831 6.1573 5.8427C6.1573 6.33708 6.5618 6.74157 7.05618 6.74157ZM0.898876 25.3933C0.404494 25.3933 0 25.7978 0 26.2921C0 26.7865 0.404494 27.191 0.898876 27.191C1.39326 27.191 1.79775 26.7865 1.79775 26.2921C1.75281 25.7978 1.34831 25.3933 0.898876 25.3933ZM16.809 5.79775C16.7191 5.16854 16.9888 4.58427 17.5281 4.26966C18.0674 3.95506 18.7416 4.04494 19.236 4.44944C19.3708 4.53933 19.5056 4.7191 19.6404 4.94382C19.6854 4.31461 19.4157 3.59551 18.8764 2.83146C18.7416 2.65169 18.7865 2.38202 18.9663 2.24719C19.1461 2.11236 19.4157 2.1573 19.5506 2.33708C20.9888 4.35955 20.4045 5.75281 20.0899 6.24719C20.0899 6.24719 20.0899 6.29214 20.0449 6.29214C20.1348 7.01124 20.0449 8 19.6404 9.34832C19.5955 9.52809 19.4157 9.66292 19.236 9.66292C19.191 9.66292 19.1461 9.66292 19.1011 9.66292C18.8764 9.57303 18.7416 9.34832 18.8315 9.1236C19.1011 8.26966 19.191 7.59551 19.236 7.05618C18.8764 7.19101 18.427 7.2809 17.9775 7.14607C17.3483 7.01124 16.8989 6.51685 16.809 5.79775ZM17.7079 5.70787C17.7528 6.06742 17.9326 6.29214 18.2022 6.33708C18.4719 6.38202 18.9213 6.29213 19.236 6.02247C19.1011 5.48315 18.8764 5.25843 18.7416 5.16854C18.6067 5.03371 18.427 4.98876 18.2921 4.98876C18.1573 4.98876 18.0674 5.03371 17.9775 5.07865C17.7528 5.16854 17.6629 5.39326 17.7079 5.70787ZM32.9888 20.6292C32.8989 20.8539 32.6292 20.9438 32.4045 20.8539C28.6742 19.3258 25.0337 20.3596 22.9213 21.3034C23.3258 21.7978 23.6404 22.2921 23.9551 22.7865C25.2135 22.3371 26.2022 22.6966 26.6966 22.9213C26.9663 23.0562 27.191 23.191 27.4157 23.3708C28.3146 23.0112 29.618 22.7865 31.191 22.8315C31.4157 22.8315 31.6404 23.0112 31.6404 23.2809C31.6404 23.5056 31.4607 23.7303 31.191 23.7303C31.191 23.7303 31.1011 23.7303 31.0562 23.7303C29.618 23.7303 28.6742 23.9101 28.0449 24.0899C28.4944 24.6742 28.7191 25.3483 28.5843 25.8876C28.4494 26.382 28.0899 26.6966 27.5056 26.6966C26.8764 26.6966 26.3371 26.382 26.0225 25.8876C25.7528 25.4382 25.7528 24.8989 26.0225 24.4494C26.1573 24.2247 26.2921 24.0449 26.5169 23.8652C26.427 23.8202 26.3371 23.7753 26.2472 23.7303C25.618 23.4157 24.9888 23.3708 24.3146 23.5506C25.3034 25.3483 25.6629 26.8764 24.8989 27.6854C24.809 27.7753 24.6742 27.8652 24.5393 27.9551C24.5393 27.9551 24.5393 27.9551 24.4944 28C24.3596 28.0449 9.79775 34.2022 6.06742 35.8652C5.8427 35.9551 5.61798 36 5.39326 36C4.53933 36 3.86517 35.3258 3.86517 34.4719C3.86517 34.2921 3.91011 34.0674 4 33.8876L10.9213 14.6517C10.9213 14.6517 10.9213 14.6067 10.9663 14.6067C11.0562 14.382 11.1461 14.2022 11.2809 14.0674C12.0899 13.2135 13.7978 13.7079 15.7303 14.8315C15.6854 13.1236 15.4157 11.3258 14.5618 9.97753C13.8876 8.89888 12.8989 8.17978 11.6404 7.91011C11.4157 7.86517 11.236 7.64045 11.3258 7.41573C11.3708 7.19101 11.5955 7.01124 11.8202 7.10112C13.3483 7.41573 14.5169 8.22472 15.3258 9.52809C16.3595 11.191 16.6742 13.4382 16.6292 15.4157C17.8876 16.2697 19.236 17.3933 20.4045 18.5618C21.0337 19.191 21.6629 19.9101 22.2472 20.5843C24.4494 19.5506 28.4494 18.2921 32.6292 20.0449C32.9888 20.1798 33.0787 20.4045 32.9888 20.6292ZM26.8764 25.4831C27.0112 25.7079 27.2809 25.8427 27.5955 25.8427C27.7753 25.8427 27.8202 25.7978 27.8202 25.7079C27.8652 25.4831 27.6854 24.9438 27.2809 24.4944C27.0112 24.6742 26.9213 24.809 26.8764 24.8989C26.7865 25.1685 26.8315 25.3483 26.8764 25.4831ZM22.6517 27.9101C22.2472 27.7753 21.7528 27.5506 21.2584 27.2809C19.5955 26.427 17.7528 24.9438 15.9551 23.191C14.2022 21.4382 12.7191 19.5506 11.8652 17.8876C11.6404 17.4382 11.4607 17.0337 11.2809 16.6292L4.94382 34.2472C4.94382 34.2472 4.94382 34.2472 4.94382 34.2921C4.94382 34.3371 4.89888 34.427 4.89888 34.4719C4.89888 34.8315 5.16854 35.1011 5.52809 35.1011C5.61798 35.1011 5.66292 35.1011 5.75281 35.0562L5.8427 35.0112H5.88764C8.94382 33.7079 18.6966 29.573 22.6517 27.9101ZM22.1573 21.7079C21.5281 22.0674 21.1236 22.3371 21.1236 22.3371C21.0337 22.382 20.9438 22.427 20.8539 22.427C20.7191 22.427 20.5843 22.382 20.4944 22.2472C20.3595 22.0674 20.4045 21.7978 20.5843 21.6629C20.6292 21.618 20.9888 21.3933 21.573 21.0787C21.0787 20.4944 20.5393 19.8652 19.9101 19.2809C18.7865 18.1573 17.7079 17.2584 16.7191 16.5393C16.5843 18.5618 16.2247 20.1798 16.1798 20.3146C16.1348 20.4944 15.9551 20.6292 15.7753 20.6292C15.7303 20.6292 15.6854 20.6292 15.6854 20.6292C15.4607 20.5843 15.3258 20.3596 15.3708 20.0899C15.3708 20.0449 15.8202 18.2022 15.9101 15.9551C14.4719 15.0562 13.3483 14.6067 12.6292 14.6067C12.3595 14.6067 12.1798 14.6517 12.0449 14.7865C11.7753 15.0562 11.7753 15.9551 12.6292 17.573C13.4831 19.1461 14.8764 20.9438 16.5843 22.6517C18.2921 24.3596 20.0899 25.7528 21.6629 26.6067C23.2809 27.4607 24.1798 27.4607 24.4494 27.191C24.8539 26.7865 24.5843 25.618 23.6854 24.0449C23.1461 24.3596 22.6067 24.809 22.0674 25.4382C21.9326 25.618 21.618 25.6629 21.4382 25.4831C21.2584 25.3483 21.2135 25.0337 21.3933 24.8539C22.0225 24.0899 22.6517 23.5955 23.191 23.2809C22.9213 22.7416 22.5618 22.2472 22.1573 21.7079ZM20.8539 16.6742C20.9438 16.764 21.0337 16.809 21.1685 16.809C21.3034 16.809 21.3933 16.764 21.4831 16.6742C26.0674 11.9551 26.1573 6.69663 26.1573 6.47191C26.1573 6.24719 25.9775 6.02247 25.7079 6.02247C25.4831 6.02247 25.2584 6.20225 25.2584 6.47191C25.2584 6.51685 25.1685 11.6404 20.8539 16.0899C20.6742 16.2247 20.6742 16.4944 20.8539 16.6742ZM35.3708 10.0674C34.1124 13.3933 32.4494 13.7528 31.5506 13.6629C31.4607 13.6629 31.4157 13.6629 31.3258 13.618C30.6517 14.1573 29.6629 14.6966 28.1348 15.236C28.0899 15.236 28.0449 15.2809 28 15.2809C27.8202 15.2809 27.6404 15.1461 27.5955 14.9663C27.5056 14.7416 27.6404 14.4719 27.8652 14.427C28.9888 14.0674 29.7978 13.6629 30.382 13.2584C29.9326 12.8989 29.618 12.4045 29.5281 11.9551C29.3933 11.3258 29.7079 10.7416 30.2921 10.4719C30.8764 10.1573 31.5506 10.2022 32 10.5169C32.4045 10.8315 32.6292 11.3258 32.5393 11.8652C32.4944 12.0899 32.4045 12.4045 32.1798 12.764C33.0787 12.4944 33.9326 11.4607 34.5618 9.75281C34.6517 9.52809 34.9213 9.4382 35.1011 9.48315C35.3708 9.57303 35.4607 9.8427 35.3708 10.0674ZM31.5056 11.191C31.4157 11.1011 31.2809 11.1011 31.1461 11.1011C31.0112 11.1011 30.8315 11.1461 30.6966 11.236C30.4719 11.3708 30.382 11.5506 30.427 11.7753C30.4719 12.0899 30.7416 12.4494 31.1461 12.6292C31.5056 12.2697 31.6404 11.9551 31.6854 11.6854C31.7303 11.5056 31.6854 11.3258 31.5056 11.191Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="-1.20795e-06"
+                        y1="36"
+                        x2="38.4188"
+                        y2="28.0415"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">
+                  Congratulations your NFT is sold!
+                </th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 30px; padding-left: 40px;">
+                  You successfully sold CumRocket Babes/ Evermoon for 12,000
+                  CUMMIES
+                </td>
+              </tr>
+              <tr style="display: inline-block; vertical-align: bottom; width: 100%;">
+                <td class="card-left" style="padding-bottom: 22px">
+                  <img src="assets/card-img.png" alt="" style="max-width: 140px;" />
+                </td>
+                <td class="card-right" style="padding-bottom: 22px">
+                  <p style="padding-bottom: 10px; color: #525f7f; font-size: 14px; font-family: SharpSans-Semibold; line-height: 21px;">
+                    Edition #15/ 25
+                  </p>
+                  <p style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #32325d; padding-bottom: 10px">
+                    CumRocket Babes/ Evermoon
+                  </p>
+                  <p
+                  class="g-text"
+                    style="font-size: 16px; padding-bottom: 30px; color: #32325d; font-size: 16px; line-height: 20px; font-family: SharpSans-Bold;"
+                  >
+                    12000 CUMMIES
+                  </p>
+                  <button
+                    style="background: linear-gradient(45deg, #7000e9 0%, #ff00c5 20.93%, #ff0076 45%, #005ce3 100%); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ color: #fff; padding: 13px 21px; border-radius: 100vh; border: none; font-weight: 700; font-family: SharpSans-Bold; opacity: 1; cursor: pointer; font-size: 0.875rem;"
+                    @click="fakeRouting('eight')"
+                  >
+                    View NFT
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="s-text" style="padding-bottom: 12px; font-size: 14px;
+                color: #101115;
+                font-family: SharpSans-Semibold;
+                line-height: 21px;">
+                  You can checkout your activity
+                  <a href="#" style="color: #4e82ee; text-decoration: none">Here</a href="#">
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 7 -->
+
+      <!-- Email Template 8 -->
+      <div v-if="eEight">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="34"
+                    height="36"
+                    viewBox="0 0 34 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16055 24.2485C2.44053 24.0129 5.76807 23.6106 9.7768 23.3447C14.2436 23.0484 19.5659 22.92 23.8676 23.3766C28.2597 23.8428 31.6089 24.937 31.9994 27.1125C32.0158 27.204 32.027 27.2948 32.0328 27.3848C32.1271 28.8526 31.0648 29.6729 29.3906 30.0778C29.3813 30.0806 29.372 30.0828 29.3627 30.0844C28.7661 30.2265 28.0929 30.3165 27.3672 30.3647C23.7271 30.6061 18.729 29.8035 15.7119 29.3132C15.4241 29.5703 15.2674 29.8559 15.2215 30.1113C15.2027 30.2156 15.2028 30.3134 15.2201 30.4001C15.2358 30.4784 15.2659 30.5473 15.3092 30.6027C15.3551 30.6614 15.4177 30.7062 15.4954 30.7318C15.5188 30.7377 15.5423 30.7435 15.5659 30.7492C15.5689 30.7499 15.5718 30.7506 15.5748 30.7514C15.6289 30.7645 15.6836 30.7773 15.7389 30.7897C16.9053 31.0519 18.2917 31.1447 19.2782 31.1972C19.4798 31.208 19.9994 31.2697 20.4523 31.5055C20.6803 31.6242 20.8927 31.7863 21.046 32.0072C21.2039 32.2348 21.2972 32.5185 21.2789 32.8717C21.2641 33.1601 21.1731 33.4949 20.978 33.8832C20.9737 33.8921 20.9693 33.9009 20.9647 33.9098C20.8485 34.1352 20.6319 34.3681 20.3417 34.5918C19.3453 35.3599 17.3838 36.0893 15.6991 35.9911C15.586 35.9894 15.485 35.9087 15.4605 35.7915C15.4322 35.6556 15.5177 35.5219 15.6515 35.4931C16.3813 35.3341 17.0254 35.1358 17.5866 34.8151C18.1387 34.4996 18.6158 34.0617 19.0241 33.4186C19.098 33.3016 19.2512 33.2677 19.3663 33.3428C19.4815 33.4178 19.5149 33.5735 19.441 33.6904C19.0036 34.3794 18.4938 34.8587 17.9059 35.2094C18.7617 34.9612 19.5371 34.582 20.0431 34.1919C20.2763 34.0121 20.4447 33.8359 20.5265 33.6774C20.5792 33.5751 20.5877 33.487 20.5401 33.4228C20.422 33.2636 20.0842 33.1427 19.4591 33.0913C19.2827 33.0769 19.0604 33.0656 18.7921 33.052C17.9373 33.0086 16.6367 32.9427 15.4356 32.7364C13.6612 32.4316 12.1013 31.8117 12.321 30.4912C12.4077 29.9702 12.6771 29.3844 13.1535 29.0071C13.2834 28.9043 13.428 28.817 13.5875 28.7505C13.6696 28.7108 13.7655 28.6784 13.8777 28.6559C13.8836 28.6548 13.8966 28.6525 13.9172 28.6491C14.0675 28.618 14.2286 28.6042 14.4006 28.6107C16.1467 28.6185 20.1726 28.4562 23.6449 28.2377C26.4646 28.0604 28.9051 27.8485 29.4231 27.6656C29.5283 27.6284 29.6024 27.5806 29.6471 27.5273C29.6775 27.4911 29.6927 27.4528 29.693 27.4155C29.6935 27.3709 29.6758 27.3211 29.6407 27.2703C29.5846 27.1889 29.4887 27.1105 29.3541 27.0453C29.1221 26.9628 28.8693 26.8944 28.6004 26.8436C24.6545 26.0981 20.7778 25.9222 16.5471 26.1808C12.3064 26.44 7.71196 27.1351 2.33911 28.1305C2.29405 28.1387 2.24966 28.1339 2.20964 28.1188L2.20443 28.1168L2.19936 28.1147L2.19732 28.1138L2.19396 28.1123L2.19162 28.1112L2.18891 28.1099L2.18585 28.1084L2.18358 28.1072L2.18067 28.1057L2.17806 28.1043L2.17546 28.1028L2.17238 28.101L2.1705 28.0999L2.16659 28.0976L2.16103 28.094C2.10596 28.0575 2.06466 27.9985 2.05214 27.9276C2.04406 27.8818 2.04876 27.8367 2.06361 27.796L2.06561 27.7907L2.06769 27.7856L2.06857 27.7835L2.07006 27.7801L2.07112 27.7777L2.0724 27.775L2.07389 27.7719L2.07503 27.7696L2.07653 27.7666L2.07793 27.764L2.07935 27.7613L2.0811 27.7582L2.08219 27.7563L2.08453 27.7523L2.08804 27.7467C2.0959 27.7344 2.10519 27.7222 2.11505 27.7115L3.6433 25.9805L1.08293 24.7247C0.959779 24.6644 0.908131 24.514 0.96756 24.3889C1.00556 24.3089 1.07977 24.2586 1.16055 24.2485ZM15.1173 29.2166C14.9276 29.1859 14.7545 29.1581 14.6065 29.1348C14.5288 29.1226 14.4539 29.1154 14.3816 29.1129C14.3496 29.1128 14.3183 29.1125 14.2878 29.1123C14.1069 29.1161 13.9442 29.15 13.7989 29.2068C13.7205 29.2458 13.6757 29.2946 13.6514 29.3432C13.614 29.4177 13.6173 29.4941 13.6232 29.5314C13.6247 29.5409 13.6225 29.525 13.6247 29.5365C13.7051 29.9515 14.1323 30.2614 14.7343 30.4949C14.7057 30.3482 14.705 30.1882 14.7348 30.0227C14.7819 29.7601 14.9062 29.4802 15.1173 29.2166ZM15.461 31.2401C15.4243 31.233 15.3887 31.2241 15.3544 31.2135C14.249 30.9297 13.3611 30.4716 13.1582 29.7201C12.9715 29.9799 12.8572 30.2883 12.8097 30.574C12.6553 31.5013 13.9988 31.9792 15.517 32.2399C16.6937 32.4421 17.9739 32.507 18.8153 32.5497C19.1059 32.5644 19.3465 32.5766 19.4979 32.589C20.1145 32.6397 20.528 32.7722 20.7737 32.9586C20.779 32.9199 20.7826 32.8824 20.7845 32.8461C20.7963 32.6176 20.7387 32.4379 20.6407 32.2968C20.5381 32.1489 20.3895 32.037 20.2274 31.9526C19.8565 31.7596 19.4221 31.7085 19.253 31.6996C18.25 31.6461 16.8385 31.5513 15.6322 31.2802C15.5747 31.2673 15.5176 31.2539 15.461 31.2401ZM17.9185 8.60537C17.8696 8.53431 17.8867 8.43647 17.9566 8.38683C18.0266 8.3372 18.1229 8.35456 18.1717 8.42561L19.7537 10.7215C19.8025 10.7926 19.7854 10.8904 19.7155 10.94C19.6456 10.9897 19.5492 10.9723 19.5004 10.9013L17.9185 8.60537ZM17.4665 10.6717C17.4176 10.6006 17.4347 10.5028 17.5047 10.4531C17.5746 10.4035 17.6709 10.4209 17.7198 10.4919L19.3017 12.7878C19.3506 12.8589 19.3335 12.9567 19.2635 13.0063C19.1936 13.056 19.0973 13.0386 19.0484 12.9676L17.4665 10.6717ZM13.5253 1.36801C13.9401 0.827191 14.4493 0.426012 14.9751 0.203104C15.6087 -0.0655486 16.2686 -0.0781244 16.8286 0.228117C17.2255 0.445206 17.5181 0.707095 17.7214 1.00212C18.1458 1.6183 18.1698 2.35494 17.9335 3.11752C17.7088 3.84286 17.2457 4.59325 16.6734 5.27865C15.7652 6.36643 14.5714 7.30178 13.6222 7.71192C13.5577 7.7398 13.4881 7.73774 13.4283 7.7119L13.427 7.71135C12.4781 7.30093 11.285 6.36593 10.3772 5.27865C9.80491 4.59325 9.34177 3.84286 9.11702 3.11752C8.88073 2.35494 8.90474 1.61829 9.3292 1.00211C9.53242 0.707095 9.82502 0.445206 10.222 0.228117C10.782 -0.0781244 11.4418 -0.0655486 12.0755 0.203104C12.6013 0.426012 13.1104 0.827191 13.5253 1.36801ZM15.1651 0.667994C14.6376 0.891626 14.1251 1.33179 13.7349 1.93511C13.7165 1.96471 13.6917 1.99086 13.661 2.01127C13.5464 2.08742 13.3928 2.05479 13.3178 1.93838C12.9273 1.33338 12.4139 0.89203 11.8855 0.667994C11.3868 0.456559 10.8773 0.441273 10.4566 0.671335C10.1297 0.85013 9.89336 1.05902 9.73444 1.28972C9.40948 1.76146 9.39814 2.34817 9.59013 2.96781C9.79367 3.62468 10.2224 4.31545 10.7553 4.95363C11.5848 5.94723 12.6565 6.80257 13.5253 7.20549C14.394 6.80257 15.4657 5.94723 16.2953 4.95363C16.8281 4.31545 17.2569 3.62468 17.4604 2.96781C17.6524 2.34817 17.6411 1.76147 17.3161 1.28972C17.1572 1.05902 16.9209 0.85013 16.594 0.671335C16.1733 0.441273 15.6638 0.456559 15.1651 0.667994ZM7.03016 13.519C6.82466 13.6052 6.68147 13.8022 6.61609 14.051C6.5445 14.3234 6.56557 14.6528 6.69625 14.9746C6.82691 15.2962 7.04031 15.5448 7.27959 15.6864C7.49882 15.8161 7.73751 15.8532 7.94365 15.7668C8.14914 15.6806 8.29244 15.4836 8.35781 15.2348C8.42941 14.9624 8.40834 14.633 8.27765 14.3112C8.14702 13.9895 7.93363 13.741 7.69432 13.5994C7.47508 13.4697 7.23629 13.4327 7.03016 13.519ZM6.13716 13.9209C6.23924 13.5325 6.47463 13.2173 6.82004 13.0637C6.83396 13.0562 6.84867 13.05 6.86401 13.0453C7.2151 12.9068 7.60054 12.9617 7.94251 13.164C8.2661 13.3555 8.55223 13.6819 8.72665 14.0992C8.73342 14.1124 8.73909 14.1263 8.7435 14.1407C8.90953 14.5616 8.93324 14.9977 8.83675 15.3649C8.73466 15.7533 8.49928 16.0685 8.15386 16.2221C8.13994 16.2296 8.12523 16.2358 8.10989 16.2405C7.7588 16.379 7.37336 16.3241 7.0314 16.1218C6.70781 15.9303 6.42167 15.6039 6.24725 15.1866C6.24048 15.1734 6.23481 15.1595 6.23039 15.145C6.06438 14.7242 6.04067 14.2881 6.13716 13.9209ZM6.86047 12.0092L6.02326 12.5196C5.906 12.5908 5.75407 12.552 5.68393 12.4329C5.6812 12.4283 5.67866 12.4236 5.67626 12.4188L0.141169 2.65831C0.0544146 2.50533 0.0075254 2.34215 0.000836694 2.17635C-0.00585822 2.01041 0.0276163 1.84399 0.101558 1.68471C0.17573 1.52496 0.280968 1.39262 0.411342 1.29228C0.541319 1.19223 0.69511 1.12526 0.86677 1.09591L2.74488 0.774941C3.00199 0.731005 3.25418 0.78676 3.46154 0.917137C3.66878 1.04743 3.83043 1.25221 3.90667 1.5064L6.97002 11.7207C7.00365 11.8333 6.95565 11.9515 6.86047 12.0092ZM5.98466 11.9569L6.44067 11.6789L3.43356 1.65217C3.39369 1.51924 3.3095 1.41236 3.20171 1.3446C3.09407 1.27691 2.96202 1.24816 2.82633 1.27135L0.948214 1.59232C0.857383 1.60785 0.776944 1.64257 0.709952 1.69413C0.643356 1.74538 0.588847 1.8146 0.549466 1.89943C0.509867 1.98473 0.491855 2.07177 0.49528 2.15665C0.498711 2.2417 0.523567 2.32682 0.569681 2.40814L5.98466 11.9569ZM14.1153 13.8516L15.3766 15.6402L17.5211 15.3332C17.6565 15.3142 17.7815 15.4103 17.8003 15.5479C17.8095 15.6153 17.7914 15.6802 17.7547 15.7311L16.4702 17.5025L17.4204 19.4799C17.4804 19.605 17.4292 19.7558 17.306 19.8167C17.2385 19.8501 17.1634 19.8496 17.0994 19.8216L15.0646 19.1348L13.5066 20.6644C13.4081 20.7607 13.2514 20.7576 13.1566 20.6575C13.1071 20.6052 13.0843 20.5367 13.0879 20.4695L13.1021 18.2823L11.1892 17.2498C11.0682 17.1846 11.0222 17.032 11.0864 16.9091C11.1218 16.8414 11.1831 16.7969 11.2513 16.7813L13.294 16.1222L13.6693 13.955C13.6929 13.818 13.8214 13.7263 13.9563 13.7502C14.023 13.762 14.0787 13.7999 14.1153 13.8516ZM15.0605 16.0573L14.0556 14.6324L13.7567 16.3585C13.7412 16.4477 13.6779 16.5252 13.587 16.5545L11.9419 17.0853L13.4667 17.9083C13.5451 17.9507 13.5979 18.0354 13.5976 18.1319L13.5861 19.887L14.8285 18.6673C14.8924 18.6049 14.9876 18.5799 15.0776 18.6101L16.7163 19.1633L15.9587 17.5866C15.9198 17.5054 15.9258 17.4054 15.982 17.3276L17.0063 15.915L15.3121 16.1575C15.2191 16.1768 15.1194 16.1408 15.0605 16.0573ZM24.3606 4.30249L24.4855 6.53031L26.3705 7.67604C26.4878 7.74729 26.526 7.90164 26.4558 8.02077C26.412 8.09517 26.3363 8.13823 26.2571 8.14273L24.0642 8.26985L22.9364 10.1849C22.8663 10.304 22.7144 10.3428 22.5971 10.2715C22.5239 10.227 22.4815 10.1501 22.4771 10.0696L22.3519 7.8418L20.467 6.69608C20.3497 6.62482 20.3115 6.47047 20.3816 6.35135C20.4255 6.27695 20.5012 6.23388 20.5804 6.22939L22.7733 6.10226L23.901 4.18726C23.9712 4.06813 24.1231 4.02933 24.2404 4.10058C24.3136 4.14509 24.3562 4.222 24.3606 4.30249ZM23.9986 6.69129L23.912 5.14777L23.1356 6.4661C23.0959 6.54003 23.0206 6.59203 22.9317 6.59698L21.4124 6.68494L22.7101 7.47368C22.7828 7.51403 22.834 7.59055 22.8389 7.68083L22.9255 9.22435L23.7019 7.90602C23.7416 7.83208 23.8169 7.78009 23.9058 7.77513L25.4251 7.68717L24.1274 6.89843C24.0546 6.85809 24.0035 6.78157 23.9986 6.69129ZM26.8598 17.6391C27.2053 17.7927 27.4406 18.1079 27.5427 18.4963C27.6392 18.8634 27.6155 19.2996 27.4495 19.7204C27.4451 19.7349 27.4394 19.7487 27.4326 19.7619C27.2582 20.1793 26.9721 20.5057 26.6485 20.6971C26.3065 20.8995 25.9211 20.9544 25.57 20.8159C25.5547 20.8112 25.5399 20.805 25.526 20.7974C25.1806 20.6438 24.9452 20.3287 24.8431 19.9402C24.7467 19.5731 24.7704 19.137 24.9364 18.7161C24.9408 18.7017 24.9465 18.6878 24.9532 18.6746C25.1277 18.2572 25.4138 17.9309 25.7374 17.7394C26.0793 17.5371 26.4648 17.4822 26.8159 17.6206C26.8312 17.6254 26.8459 17.6316 26.8598 17.6391ZM27.0638 18.6263C26.9984 18.3775 26.8552 18.1806 26.6497 18.0944C26.4436 18.008 26.2048 18.045 25.9856 18.1747C25.7463 18.3163 25.5329 18.5648 25.4023 18.8865C25.2716 19.2083 25.2505 19.5378 25.3221 19.8102C25.3875 20.059 25.5306 20.256 25.7361 20.3421C25.9423 20.4285 26.1811 20.3915 26.4003 20.2618C26.6396 20.1202 26.8529 19.8718 26.9835 19.5502C27.1142 19.2284 27.1354 18.8987 27.0638 18.6263ZM27.2392 16.2543L27.7017 16.5362L33.3936 7.22933C33.4416 7.15091 33.469 7.06827 33.4757 6.98495C33.4824 6.90076 33.4684 6.81416 33.4334 6.72875C33.3983 6.6431 33.3479 6.57211 33.2849 6.51805C33.2221 6.46412 33.1449 6.42562 33.0561 6.40487L30.8726 5.89451C30.7336 5.86203 30.5948 5.88658 30.4804 5.95376C30.3656 6.02124 30.2752 6.13114 30.2339 6.26899L27.2392 16.2543ZM27.6566 17.095L26.8194 16.5846C26.7242 16.5269 26.6762 16.4087 26.7099 16.296L29.7608 6.12322C29.8403 5.85799 30.0131 5.64721 30.2322 5.51842C30.4519 5.38934 30.7178 5.34201 30.9831 5.40401L33.1666 5.91438C33.3337 5.95343 33.4815 6.02811 33.6049 6.13392C33.7281 6.23964 33.8252 6.37506 33.891 6.5357C33.9569 6.69655 33.9831 6.86173 33.9701 7.02435C33.9571 7.18784 33.905 7.34711 33.8144 7.49526L27.994 17.0122C27.9229 17.1284 27.7727 17.1655 27.6566 17.095ZM17.2674 29.0535C20.2505 29.5204 24.2883 30.0645 27.3362 29.8624C28.0354 29.816 28.6807 29.7308 29.2452 29.5966L29.2474 29.5959C29.9988 29.3585 30.4541 29.0705 30.6727 28.7699C30.7947 28.6021 30.8367 28.4315 30.8113 28.2669C30.784 28.09 30.6806 27.9096 30.5155 27.737C30.4228 27.6402 30.3122 27.5472 30.1859 27.4597C30.1762 27.6013 30.1225 27.7363 30.0233 27.8544C29.9237 27.9727 29.7782 28.0725 29.586 28.1403C29.0204 28.34 26.5314 28.5603 23.674 28.7401C21.5311 28.8749 19.1732 28.9883 17.2674 29.0535ZM29.5216 26.5732C29.5294 26.5756 29.5371 26.5784 29.5448 26.5816C30.1053 26.7855 30.5646 27.067 30.8703 27.3864C31.1061 27.6328 31.2561 27.9057 31.2999 28.1901C31.3108 28.2608 31.3152 28.3315 31.3127 28.4022C31.4822 28.1222 31.5627 27.7956 31.5383 27.4164C31.5335 27.3408 31.5249 27.2691 31.5127 27.2011C31.1719 25.3024 27.9959 24.3205 23.8172 23.877C19.5483 23.4238 14.2543 23.5521 9.80783 23.847C6.45414 24.0695 3.58855 24.386 2.00737 24.6195L4.15471 25.6727C4.27786 25.733 4.32951 25.8834 4.27008 26.0085C4.25738 26.0353 4.2406 26.0587 4.2209 26.0784L2.96089 27.5056C8.05229 26.576 12.4471 25.9273 16.518 25.6785C20.7867 25.4176 24.7011 25.5956 28.6896 26.3491C28.9847 26.4049 29.2636 26.4809 29.5216 26.5732Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="-1.14423e-06"
+                        y1="36"
+                        x2="36.5467"
+                        y2="28.8287"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">Thanks for your order!</th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 30px; padding-left: 40px;">
+                  You’ve successfully purchased the collectible CumRocket Babes/
+                  Evermoon you can view this in your my NFT tab, enjoy.
+                </td>
+              </tr>
+              <tr style="margin-bottom: 36px; display: inline-block; vertical-align: bottom; width: 100%;">
+                <td class="card-left">
+                  <img src="assets/card-img.png" alt="" style="max-width: 140px;" />
+                </td>
+                <td class="card-right">
+                  <p style="padding-bottom: 10px; color: #525f7f; font-size: 14px; font-family: SharpSans-Semibold; line-height: 21px;">
+                    Edition #15/ 25
+                  </p>
+                  <p style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #32325d; padding-bottom: 10px">
+                    CumRocket Babes/ Evermoon
+                  </p>
+                  <p class="g-text"
+                    style="font-size: 16px; padding-bottom: 30px; color: #32325d; font-size: 16px; line-height: 20px; font-family: SharpSans-Bold;"
+                  >
+                    12000 CUMMIES
+                  </p>
+                  <button
+                    style="background: linear-gradient(45deg, #7000e9 0%, #ff00c5 20.93%, #ff0076 45%, #005ce3 100%); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ color: #fff; padding: 13px 21px; border-radius: 100vh; border: none; font-weight: 700; font-family: SharpSans-Bold; opacity: 1; cursor: pointer; font-size: 0.875rem;"
+                    @click="fakeRouting('nine')"
+                  >
+                    View NFT
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 8 -->
+
+      <!-- Email Template 9 -->
+      <div v-if="eNine">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.753 10.5815C22.9285 10.3322 23.1923 10.159 23.4908 10.0971C23.7893 10.0352 24.1001 10.0891 24.3603 10.248C24.6205 10.4068 24.8105 10.6587 24.8918 10.9526C24.9731 11.2464 24.9396 11.5601 24.798 11.8301L21.5404 17.2049L32.1819 29.0911C34.7809 25.7616 36.127 21.6246 35.9848 17.4033C35.8426 13.1819 34.2213 9.14482 31.4042 5.99776C28.5871 2.8507 24.7535 0.793905 20.5736 0.186952C16.3937 -0.420001 12.1334 0.461503 8.5376 2.67736L19.8635 15.3279L22.753 10.5815Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M30.8252 30.6353L20.4198 19.0293L18.7549 17.1563L6.85276 3.86137L3.77916 0.42759C3.65945 0.293586 3.51006 0.189428 3.34293 0.123432C3.0922 0.0203203 2.81395 0.00510308 2.55347 0.080257C2.29298 0.155411 2.06561 0.316512 1.90833 0.53734C1.75106 0.758168 1.67316 1.02572 1.6873 1.29646C1.70145 1.5672 1.8068 1.82518 1.98623 2.02842L5.06383 5.47021C1.89862 8.743 0.09049 13.0932 0.00330554 17.6453C-0.0838789 22.1975 1.55635 26.6137 4.59392 30.0053C7.63149 33.3969 11.8409 35.5121 16.3751 35.9253C20.9093 36.3384 25.4317 35.0188 29.0323 32.2321L32.0298 35.5819C32.1426 35.708 32.2808 35.8088 32.4353 35.8778C32.5898 35.9467 32.7571 35.9823 32.9263 35.9821C33.1579 35.9816 33.3844 35.9142 33.5785 35.7879C33.7726 35.6617 33.9261 35.482 34.0204 35.2705C34.1147 35.059 34.1459 34.8247 34.1101 34.596C34.0743 34.3672 33.9731 34.1536 33.8188 33.981L30.8252 30.6353ZM16.5378 25.4326C16.4308 25.609 16.2801 25.7549 16.1003 25.8561C15.9205 25.9573 15.7176 26.0105 15.5113 26.0105C15.3049 26.0105 15.102 25.9573 14.9222 25.8561C14.7424 25.7549 14.5917 25.609 14.4847 25.4326L11.191 20.0058C11.109 19.871 11.0544 19.7213 11.0302 19.5654C11.0061 19.4095 11.0129 19.2503 11.0502 19.097C11.0876 18.9437 11.1547 18.7993 11.2479 18.672C11.3411 18.5446 11.4584 18.4369 11.5932 18.3549C11.728 18.2729 11.8777 18.2183 12.0336 18.1941C12.1895 18.17 12.3487 18.1768 12.5019 18.2141C12.6552 18.2515 12.7997 18.3186 12.927 18.4118C13.0544 18.505 13.1621 18.6223 13.2441 18.7571L15.5173 22.4951L17.4623 19.2934L19.1351 21.1624L16.5378 25.4326Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="-1.14932e-06"
+                        y1="35.9996"
+                        x2="36.6946"
+                        y2="28.7604"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">
+                  NFT unpublished from Marketplace!
+                </th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 30px; padding-left: 40px;">
+                  Stile live in your account and you can publish it again
+                </td>
+              </tr>
+              <tr style="margin-bottom: 36px; display: inline-block; vertical-align: bottom; width: 100%;">
+                <td class="card-left">
+                  <img src="assets/card-img.png" alt="" style="max-width: 140px;" />
+                </td>
+                <td class="card-right">
+                  <p style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #32325d; padding-bottom: 10px">
+                    CumRocket Babes/ Evermoon
+                  </p>
+                  <p class="g-text"
+                    style="font-size: 16px; padding-bottom: 30px; color: #32325d; font-size: 16px; line-height: 20px; font-family: SharpSans-Bold;"
+                  >
+                    Unpublished
+                  </p>
+                  <button
+                    style="background: linear-gradient(45deg, #7000e9 0%, #ff00c5 20.93%, #ff0076 45%, #005ce3 100%); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ color: #fff; padding: 13px 21px; border-radius: 100vh; border: none; font-weight: 700; font-family: SharpSans-Bold; opacity: 1; cursor: pointer; font-size: 0.875rem;"
+                    @click="fakeRouting('ten')"
+                  >
+                    View NFT
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 9 -->
+
+      <!-- Email Template 10 -->
+      <div v-if="eTen">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" @click="fakeRouting('eleven')" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="37"
+                    height="36"
+                    viewBox="0 0 37 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.24925 31.138C5.89452 31.138 5.5398 31.0029 5.26959 30.732C4.72849 30.1909 4.72849 29.3137 5.26959 28.7726L28.7848 5.25739C29.3253 4.71629 30.2038 4.71629 30.7442 5.25739C31.2853 5.79848 31.2853 6.6756 30.7442 7.2167L7.22891 30.732C6.95871 31.0022 6.60398 31.138 6.24925 31.138Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <path
+                      d="M17.9603 36C17.9596 36 17.9603 36 17.9603 36C16.3848 36 14.8225 35.7949 13.317 35.3896C6.82932 33.6444 1.74951 28.2701 0.375637 21.6973C-1.02457 15.0011 1.55968 7.96197 6.96027 3.76413C10.0821 1.33716 14.0195 0 18.0476 0C20.8362 0 23.6054 0.648486 26.0567 1.8741C32.1099 4.90245 36.0209 11.2293 36.0209 17.9934C36.0209 23.5125 33.4166 28.832 29.0545 32.2227C25.9209 34.6587 21.9808 36 17.9603 36ZM18.0483 2.77131C14.6333 2.77131 11.2994 3.90062 8.66185 5.95208C4.09127 9.5049 1.90332 15.4625 3.08875 21.1298C4.25131 26.6898 8.54892 31.2368 14.0375 32.7139C15.3081 33.0555 16.628 33.2287 17.9603 33.2287C21.3683 33.2287 24.7043 32.0945 27.3543 30.0348C31.0457 27.1651 33.2496 22.6638 33.2496 17.9934C33.2496 12.27 29.94 6.9158 24.8172 4.35303C22.7491 3.31864 20.4087 2.77131 18.0483 2.77131Z"
+                      fill="black"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="4.86377"
+                        y1="31.1379"
+                        x2="33.0128"
+                        y2="25.285"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">Your NFT is blocked</th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 30px; padding-left: 40px;">
+                  It’s not fit to CumRocket and its blocked by admin. So its
+                  unpublished from marketplace and it can’t publieshed again. If
+                  you publish it again, your account can be blocked.
+                </td>
+              </tr>
+              <tr style="margin-bottom: 36px; display: inline-block; vertical-align: bottom; width: 100%;">
+                <td class="card-left blocked-img">
+                  <img src="assets/card-img.png" alt="" style="max-width: 140px;" />
+                </td>
+                <td class="card-right">
+                  <p style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #32325d; padding-bottom: 10px">
+                    CumRocket Babes/ Evermoon
+                  </p>
+                  <p style="color: #f7316e; padding-bottom: 15px; font-size: 16px; line-height: 20px; font-family: SharpSans-Bold;">
+                    Blocked
+                  </p>
+                  <p style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 8px">Reason</p>
+                  <p style="font-size: 14px; color: #525f7f; font-family: SharpSans-Semibold; line-height: 21px">
+                    Lorem Ipsum doesn’t exist because people think the content
+                    is meaningless window dressing.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 10 -->
+
+      <!-- Email Template 11 -->
+      <div v-if="eEleven">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" @click="fakeRouting('twelve')" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="37"
+                    height="36"
+                    viewBox="0 0 37 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.24925 31.138C5.89452 31.138 5.5398 31.0029 5.26959 30.732C4.72849 30.1909 4.72849 29.3137 5.26959 28.7726L28.7848 5.25739C29.3253 4.71629 30.2038 4.71629 30.7442 5.25739C31.2853 5.79848 31.2853 6.6756 30.7442 7.2167L7.22891 30.732C6.95871 31.0022 6.60398 31.138 6.24925 31.138Z"
+                      fill="url(#paint0_linear)"
+                    />
+                    <path
+                      d="M17.9603 36C17.9596 36 17.9603 36 17.9603 36C16.3848 36 14.8225 35.7949 13.317 35.3896C6.82932 33.6444 1.74951 28.2701 0.375637 21.6973C-1.02457 15.0011 1.55968 7.96197 6.96027 3.76413C10.0821 1.33716 14.0195 0 18.0476 0C20.8362 0 23.6054 0.648486 26.0567 1.8741C32.1099 4.90245 36.0209 11.2293 36.0209 17.9934C36.0209 23.5125 33.4166 28.832 29.0545 32.2227C25.9209 34.6587 21.9808 36 17.9603 36ZM18.0483 2.77131C14.6333 2.77131 11.2994 3.90062 8.66185 5.95208C4.09127 9.5049 1.90332 15.4625 3.08875 21.1298C4.25131 26.6898 8.54892 31.2368 14.0375 32.7139C15.3081 33.0555 16.628 33.2287 17.9603 33.2287C21.3683 33.2287 24.7043 32.0945 27.3543 30.0348C31.0457 27.1651 33.2496 22.6638 33.2496 17.9934C33.2496 12.27 29.94 6.9158 24.8172 4.35303C22.7491 3.31864 20.4087 2.77131 18.0483 2.77131Z"
+                      fill="black"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear"
+                        x1="4.86377"
+                        y1="31.1379"
+                        x2="33.0128"
+                        y2="25.285"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#7000E9" />
+                        <stop offset="0.22631" stop-color="#FF00C5" />
+                        <stop offset="0.507577" stop-color="#FF0076" />
+                        <stop offset="1" stop-color="#005CE3" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">
+                  Tara! your account is blocked
+                </th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 12px; padding-left: 40px;">
+                  Its unfortunate but you can’t access your account in future.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 19px; padding-left: 40px;">
+                  You are breaking our
+                  <a href="#" style="color: #4e82ee; text-decoration: none;">terms of use</a> repeatedly, so your
+                  account is blocked now we have given our explanation below.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 10px; padding-left: 40px;">Reason</td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 20px; color: #525f7f; font-size: 14px; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  Lorem Ipsum doesn’t exist because people think the content is
+                  meaningless window dressing, only there to be decorated by
+                  designers who can’t be bothered to read. Lorem Ipsum exists
+                  because words are powerful.
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  If you did not initate this request, please contact us
+                  immediately at
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 20px; font-size: 14px; color: #4e82ee; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  <a href="mailto:support@cumrocket.io" style="text-decoration: none; color: #4e82ee;">support@cumrocket.io</a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 11 -->
+
+      <!-- Email Template 12 -->
+      <div v-if="eTwelve">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead class="e-logo">
+            <td style="padding: 40px 0 32px;"><img style="width: 147px; margin: 0 auto; display: block;" src="assets/logo_dark.svg" alt="logo" /></td>
+          </thead>
+          <tbody>
+            <table style="background-color: #fff; border-radius: 20px; border-collapse: collapse; max-width: 600px; width: 95%; margin: 0 auto; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);" @click="fakeRouting('one')" class="e-body">
+              <tr>
+                <td style="padding-bottom: 26px; padding-top: 50px;
+                ; padding-top: 50px; padding-left: 40px;">
+                  <svg
+                    width="38"
+                    height="36"
+                    viewBox="0 0 38 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 15.5143C0 14.0058 0.995949 12.2473 3.80877 12.2473L12.639 12.2973C12.9673 12.316 13.276 12.4595 13.5018 12.6986C13.7276 12.9376 13.8534 13.254 13.8534 13.5828C13.8534 13.9117 13.7276 14.228 13.5018 14.4671C13.276 14.7061 12.9673 14.8497 12.639 14.8684L3.80044 14.8225C2.57113 14.8225 2.57113 15.3268 2.57113 15.5185C2.57113 15.8268 2.69615 16.5394 3.82128 16.5394L25.8363 16.6978L21.2316 12.0847C21.0093 11.8396 20.8898 11.5183 20.898 11.1875C20.9063 10.8567 21.0415 10.5417 21.2758 10.308C21.5101 10.0742 21.8254 9.93967 22.1562 9.9322C22.4871 9.92473 22.8081 10.0449 23.0527 10.2679L28.3033 15.5185C28.6324 15.8464 28.8935 16.236 29.0717 16.6651C29.2499 17.0942 29.3416 17.5542 29.3416 18.0188C29.3416 18.4833 29.2499 18.9433 29.0717 19.3724C28.8935 19.8015 28.6324 20.1911 28.3033 20.519L23.0527 25.7696C22.8081 25.9926 22.4871 26.1128 22.1562 26.1053C21.8254 26.0978 21.5101 25.9633 21.2758 25.7295C21.0415 25.4958 20.9063 25.1808 20.898 24.85C20.8898 24.5192 21.0093 24.1979 21.2316 23.9528L25.8822 19.2731L3.82961 19.1105C1.31682 19.1105 0 17.302 0 15.5143ZM10.6596 7.18C11.0011 7.18 11.3286 7.04434 11.5701 6.80285C11.8116 6.56137 11.9472 6.23385 11.9472 5.89235C11.9472 5.00819 12.2984 4.16025 12.9236 3.53505C13.5488 2.90986 14.3968 2.55863 15.2809 2.55863H31.5912C32.4753 2.55863 33.3233 2.90986 33.9485 3.53505C34.5737 4.16025 34.9249 5.00819 34.9249 5.89235V30.0618C34.9249 30.946 34.5737 31.7939 33.9485 32.4191C33.3233 33.0443 32.4753 33.3955 31.5912 33.3955H15.2893C14.4051 33.3955 13.5572 33.0443 12.932 32.4191C12.3068 31.7939 11.9556 30.946 11.9556 30.0618C11.9655 29.8868 11.9397 29.7117 11.8796 29.547C11.8195 29.3824 11.7264 29.2318 11.606 29.1044C11.4857 28.9769 11.3406 28.8755 11.1796 28.8061C11.0187 28.7367 10.8452 28.7009 10.67 28.7009C10.4947 28.7009 10.3213 28.7367 10.1604 28.8061C9.9994 28.8755 9.8543 28.9769 9.73395 29.1044C9.6136 29.2318 9.52052 29.3824 9.46041 29.547C9.40031 29.7117 9.37445 29.8868 9.38442 30.0618C9.38223 30.8394 9.53322 31.6099 9.82878 32.3292C10.1243 33.0484 10.5587 33.7024 11.107 34.2538C11.6553 34.8053 12.3069 35.2433 13.0245 35.5429C13.7421 35.8425 14.5116 35.9978 15.2893 36H31.5912C33.1588 35.9978 34.6615 35.3741 35.77 34.2656C36.8784 33.1572 37.5021 31.6544 37.5043 30.0868V5.91735C37.5032 4.34903 36.88 2.8452 35.7714 1.73584C34.6629 0.626482 33.1595 0.00220696 31.5912 0L15.2893 0C13.7217 0.00220478 12.2189 0.625907 11.1105 1.73437C10.002 2.84283 9.37829 4.34559 9.37609 5.91318C9.37608 6.25397 9.51117 6.58086 9.75175 6.82222C9.99234 7.06358 10.3188 7.19973 10.6596 7.20083V7.18Z"
+                      fill="#525F7F"
+                    />
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th style="padding-bottom: 16px; font-size: 24px;
+                text-align: left;
+                color: #101115; padding-left: 40px;">
+                  Did you log in from new device?
+                </th>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; line-height: 15.4px; font-family: SharpSans-Bold; color: #101115; padding-bottom: 40px; padding-left: 40px;">
+                  We noticed your CumRocket account was looged into from a new
+                  If this was you, you can safely diregard this email.
+                </td>
+              </tr>
+              <tr style="vertical-align: top;" class="t-table">
+                <td
+                  style="width: 150px; padding-right: 0; padding-bottom: 16px; padding-left: 40px;"
+                >
+                  When
+                </td>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px; padding-bottom: 16px;">
+                  Sun, Nov 20, 2021, 11:41 AM EDT
+                </td>
+              </tr>
+              <tr style="vertical-align: top;" class="t-table">
+                <td
+                  style="width: 150px; padding-right: 0; padding-bottom: 16px; padding-left: 40px;"
+                >
+                  Where
+                </td>
+                <td style="display: inline-block; color: #525f7f; font-size: 14px; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px; padding-bottom: 16px;">
+                  California, United States
+                </td>
+              </tr>
+              <tr style="vertical-align: top;" class="t-table">
+                <td
+                  style="
+                    width: 150px;
+                    padding-right: 0;
+                    padding-bottom: 16px;
+                    padding-left: 40px;
+                  "
+                >
+                  Device Type
+                </td>
+                <td
+                  style="display: inline-block; padding-bottom: 45px; color: #525f7f; font-size: 14px; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;"
+                >
+                  Chrome using mac
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px; padding-top: 30px;">
+                  If you did not initate this request, please contact us
+                  immediately at
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 18px; font-size: 14px; color: #4e82ee; font-family: SharpSans-Semibold; line-height: 21px; padding-left: 40px;">
+                  <a href="mailto:support@cumrocket.io" style="text-decoration: none; color: #4e82ee;">support@cumrocket.io</a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px; color: #101115; font-family: SharpSans-Semibold; line-height: 21px; padding-bottom: 6px; padding-left: 40px;">Regards</td>
+              </tr>
+              <tr>
+                <td style="color: #525f7f; font-size: 14px; font-family: SharpSans-Bold; line-height: 15.4px; padding-bottom: 60px; padding-left: 40px;">
+                  Team CumRocket
+                </td>
+              </tr>
+            </table>
+          </tbody>
+          <tfoot>
+            <table style="margin: 30px auto 50px auto;">
+              <tr>
+                <td style="display: inline-block">
+                  <a
+                    href="https://t.me/cumrocket"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-telegram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://twitter.com/CumRocketCrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitter" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://discord.gg/cummies"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-discord" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.reddit.com/r/CumRocket/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-reddit" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.twitch.tv/c_rocketcrypto"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-twitch" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.instagram.com/cumrocketofficial/"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-instagram" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://www.youtube.com/channel/UCUqxXJdKK5pTLhSMMTNt9jw"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-youtube" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="https://cumrocket.medium.com"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bxl-medium-square" style="color: #525f7f"></i>
+                  </a>
+                </td>
+                <td style="display: inline-block">
+                  <a
+                    href="mailto: hello@cumrocket.io"
+                    target="_blank"
+                    class="flink"
+                  >
+                    <i class="bx bx-mail-send" style="color: #525f7f"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 10px; color: #32325d; font-family: SharpSans-Bold; text-align: center; padding-top: 30px; margin: 0 auto; display: block;">
+                  <p style="text-align: center">@Copyright 2021. All rights reserved.</p>
+                </td>
+              </tr>
+            </table>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Email Template 12 -->
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            eOne: true,
+            eTwo: false,
+            eThree: false,
+            eFour: false,
+            eFive: false,
+            eSix: false,
+            eSeven: false,
+            eEight: false,
+            eNine: false,
+            eTen: false,
+            eEleven: false,
+            eTwelve: false,
+          };
+        },
+        methods: {
+          fakeRouting(item) {
+            if (item === "one") {
+              this.eOne = true;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "two") {
+              this.eOne = false;
+              this.eTwo = true;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "three") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = true;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "four") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = true;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "five") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = true;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "six") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = true;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "seven") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = true;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "eight") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = true;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "nine") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = true;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "ten") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = true;
+              this.eEleven = false;
+              this.eTwelve = false;
+            } else if (item === "eleven") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = true;
+              this.eTwelve = false;
+            } else if (item === "twelve") {
+              this.eOne = false;
+              this.eTwo = false;
+              this.eThree = false;
+              this.eFour = false;
+              this.eFive = false;
+              this.eSix = false;
+              this.eSeven = false;
+              this.eEight = false;
+              this.eNine = false;
+              this.eTen = false;
+              this.eEleven = false;
+              this.eTwelve = true;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
